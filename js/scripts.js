@@ -5,8 +5,17 @@ $(function(){
 
     var task = {description1: inputTask};
 
-    $("#toDoList").append("<li>" + task.description1 + "</li>");
+    $("#toDoList").append("<li><span class='toDo'>" + task.description1 + "</span></li>");
+
+    $(".toDo").last().click(function(){
+      $("#doneList").append("<li><span class='done'>" + task.description1 + "</span></li>");
+      $(this).parent('li').remove();
+    });
+
 
     event.preventDefault();
   });
+
+
+
 });

@@ -1,1 +1,8 @@
+.toDo{
+  color: blue;
+  cursor:pointer;
+}
 
+.toDo:hover{
+  text-decoration: underline;
+}
