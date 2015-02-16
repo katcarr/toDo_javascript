@@ -1,8 +1,16 @@
 .toDo{
-  color: blue;
+  color: yellow;
   cursor:pointer;
 }
 
 .toDo:hover{
   text-decoration: underline;
+}
+
+body {
+  background-image: url("img/background.jpg");
+  color: white;
+  font-family: 'Slabo 27px', serif;
+  background-attachment: fixed;
+  background-position: center;
 }

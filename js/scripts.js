@@ -3,15 +3,19 @@ $(function(){
 
     var inputTask = $("#task").val();
 
-    var task = {description1: inputTask};
-
-    $("#toDoList").append("<li><span class='toDo'>" + task.description1 + "</span></li>");
+    if(inputTask){
+      var task = {description1: inputTask};
+      $("#toDoList").append("<li><span class='toDo'>" + task.description1 + "</span></li>");
+    } else{
+      alert("Please input a task")
+    }
 
     $(".toDo").last().click(function(){
       $("#doneList").append("<li><span class='done'>" + task.description1 + "</span></li>");
       $(this).parent('li').remove();
     });
 
+    $("#task").val("");
 
     event.preventDefault();
   });
