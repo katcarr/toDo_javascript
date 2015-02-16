@@ -2,6 +2,7 @@ $(function(){
   $("#toDoForm").submit(function(event){
 
     var inputTask = $("#task").val();
+    inputTask = inputTask[0].toUpperCase() + inputTask.slice(1);  
 
     if(inputTask){
       var task = {description1: inputTask};
