@@ -1,9 +1,9 @@
-.toDo{
+.toDo, .list{
   color: yellow;
   cursor:pointer;
 }
 
-.toDo:hover{
+.toDo:hover, .list:hover {
   text-decoration: underline;
 }
 
