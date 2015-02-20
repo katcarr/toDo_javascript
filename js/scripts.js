@@ -28,6 +28,8 @@ $(function(){
       $("#list-name").text(currentList.name)
     });
 
+    $(".first-hidden").show();
+
   });
 
 
@@ -41,6 +43,8 @@ $(function(){
         $("#doneList").append("<li>" + inputtedTask + "</li>")
         $(this).parent('li').remove();
       });
+
+    $("#instructions").show();
   });
 
 

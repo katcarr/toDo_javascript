@@ -12,17 +12,19 @@
     <div class="container">
       <h1>To Do Lists</h1>
 
-      <div class="row">
-
+      <div class="row bigContainer">
         <div class="col-md-6 col-sm-6">
+          <div class="ourContainer">
               <form id="listForm">
                 <div class="form-group">
-                  <label for="list">Create List</label>
+                  <h3>Create A List</h3>
                   <input id="list" class="form-control" required autofocus>
                 </div>
 
                 <button type="submit" class="btn btn-warning">Add List</button>
               </form>
+
+              <h3 class="first-hidden">Lists</h3>
               <ul id="lists">
 
               </ul>
@@ -32,9 +34,10 @@
                 <ul id="lists-tasks">
                 </ul>
               </div>
+          </div>
         </div>
-        <div class="col-md-6 col-sm-6">
-
+        <div class="col-md-6 col-sm-6 first-hidden">
+          <div class="ourContainer">
             <form id="toDoForm">
               <div class="form-group">
                 <h3>Add a Task To the <span id="list-name"></span> List</h3>
@@ -43,14 +46,13 @@
 
               <button type="submit" class="btn btn-warning">Add Task</button>
             </form>
-              <h5>Click A Task When Its Done</h5>
-            <ul id="toDoList">
 
-            </ul>
-              <h2>Tasks Done:</h2>
+            <h5 id="instructions">Click A Task When Its Done</h5>
+            <h3 id="done-title">Tasks Done</h3>
             <ul id="doneList">
 
             </ul>
+          </div>
         </div>
 
       </div>
