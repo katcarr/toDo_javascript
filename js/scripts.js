@@ -2,6 +2,10 @@ $(function(){
 
   var currentList = null;
 
+  // $("body").submit(function(event){
+  //   event.preventDefault();
+  // });
+
   $("#listForm").submit(function(event) {
     event.preventDefault();
     var inputList = $("#list").val();
@@ -18,17 +22,25 @@ $(function(){
       $("#lists-tasks li").remove();
       $("#list-list h2").text(currentList.name);
       currentList.tasks.forEach(function(task){
-        $("#lists-tasks").append("<li>"+ task +"</li>");
+        $("#lists-tasks").append("<li><span class='a-task'>"+ task +"</span></li>");
       });
+      $("#toDoForm").show();
+      $("#list-name").text(currentList.name)
     });
 
   });
 
 
-  $("#task-add").click(function(){
+  $("#toDoForm").submit(function(event){
+    event.preventDefault();
     var inputtedTask = $("#task").val();
     currentList.tasks.push(inputtedTask);
+    $("#lists-tasks").append("<li><span class='a-task'>"+ inputtedTask +"</span></li>");
     $("#task").val("");
+      $(".a-task").last().click(function() {
+        $("#doneList").append("<li>" + inputtedTask + "</li>")
+        $(this).parent('li').remove();
+      });
   });
 
 

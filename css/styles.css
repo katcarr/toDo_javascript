@@ -1,9 +1,13 @@
-.toDo, .list{
+.a-task, .list{
   color: yellow;
   cursor:pointer;
 }
 
-.toDo:hover, .list:hover {
+#toDoForm {
+  display: none;
+}
+
+.a-task:hover, .list:hover {
   text-decoration: underline;
 }
 
